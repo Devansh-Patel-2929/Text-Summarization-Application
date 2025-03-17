@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form method="post">
+        <textarea name="text" rows="10" cols="50"></textarea><br>
+        <select name="method">
+            <option value="abstractive">Abstractive</option>
+            <option value="extractive">Extractive</option>
+        </select>
+        <input type="submit">
+    </form>
+    {% if summary %}
+    <h3>Summary:</h3>
+    <p>{{ summary }}</p>
+    {% endif %}
+</body>
+</html>
