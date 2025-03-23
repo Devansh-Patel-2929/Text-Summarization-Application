@@ -27,7 +27,9 @@ def index():
             selected = [sentences[i] for i, logit in enumerate(outputs) if logit.argmax() == 1]
             summary = " ".join(selected[:3])  # Top 3 sentences
         return render_template("index.html", summary=summary)
+        print("page generated")
     return render_template("index.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
